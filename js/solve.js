@@ -6,4 +6,7 @@ for(let i = 0; i < inputs.length; i++) {
         input.disabled = false;
         input.click();
     }
+    if(document.getElementById('anzahl_richtig').value > document.getElementById('anzahl_antworten').value) {
+        document.getElementById('anzahl_richtig').value = document.getElementById('anzahl_antworten').value;
+    }
 }
