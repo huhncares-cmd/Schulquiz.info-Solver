@@ -11,7 +11,8 @@
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 }
-#run {
+.solver_btn {
+	margin: 10px;
 	width: 200px;
 	height: 40px;
 	background-color: #5b91b2;
@@ -22,7 +23,7 @@
 	border-radius: 5px;
 	box-shadow: inset 0 0 0 0 #fff;
 }
-#run:hover {
+.solver_btn:hover {
 	box-shadow: inset -200px 0 0 0 #fff;
 	color: #5b91b2;
 }

@@ -1,6 +1,14 @@
 function setValueToMaximumPoints() {
     document.getElementById('anzahl_richtig').value = document.getElementById('anzahl_antworten').value;
 }
+function clickElement(input) {
+    if(!input.classList.contains('solved')) {
+        input.disabled = false;
+        input.click();
+        setValueToMaximumPoints();
+        input.classList.add('solved');
+    }
+}
 function clickAllInputs() {
     let inputs = Array();
     document.querySelectorAll('input').forEach(input => {
@@ -9,18 +17,13 @@ function clickAllInputs() {
         }
     });
     for(let i = 0; i < inputs.length; i++) {
-        input = inputs[i];
-        if(input.value == "Überprüfen!") {
-            input.disabled = false;
-            input.click();
-            setValueToMaximumPoints();
-        }
+        clickElement(inputs[i]);
     }
 }
 let div = document.body.insertAdjacentElement('beforeEnd', document.createElement('div'));
 div.classList.add('schulquiz_solver');
 div.innerHTML = `
 <p>Code injected by Schulquiz.info Solver</p>
-<button id="run">Solve</button>
+<button class="solver_btn" id="run">Solve</button>
 `;
 document.getElementById("run").addEventListener('click', clickAllInputs);
