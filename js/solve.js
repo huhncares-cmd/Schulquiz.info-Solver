@@ -5,9 +5,6 @@ function clickElement(input) {
     input.disabled = false;
     input.click();
     setValueToMaximumPoints();
-    if(document.getElementById('anzahl_richtig').value > document.getElementById('anzahl_antworten').value) {
-        setValueToMaximumPoints();
-    }
 }
 function clickAllInputs() {
     let inputs = Array();
