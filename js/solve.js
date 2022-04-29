@@ -1,5 +1,5 @@
 function setValueToMaximumPoints() {
-    document.getElementById('anzahl_richtig').value = document.getElementById('anzahl_antworten').value;
+    document.getElementById('anzahl_richtig').value = Math.floor(document.getElementById('anzahl_antworten').value - 1/20*document.getElementById('anzahl_antworten').value) + 1;
 }
 function clickElement(input) {
     input.disabled = false;
