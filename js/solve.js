@@ -12,14 +12,15 @@ function clickAllInputs() {
         input = inputs[i];
         if(input.value == "Überprüfen!") {
             input.disabled = false;
-            if(i < inputs.length - 1) {
-                input.click();
-            }
-            if(document.getElementById('anzahl_richtig').value > document.getElementById('anzahl_antworten').value) {
-                setValueToMaximumPoints();
-            }
+            input.click();
+            setValueToMaximumPoints();
         }
     }
 }
-setValueToMaximumPoints();
-clickAllInputs();
+let div = document.body.insertAdjacentElement('beforeEnd', document.createElement('div'));
+div.classList.add('schulquiz_solver');
+div.innerHTML = `
+<p>Code injected by Schulquiz.info Solver</p>
+<button id="run">Solve</button>
+`;
+document.getElementById("run").addEventListener('click', clickAllInputs);

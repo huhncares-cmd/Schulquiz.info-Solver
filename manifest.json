@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Schulquiz.info Solver",
-    "version": "1.0.4",
+    "version": "1.1.0",
     "description": "Easily solve every quiz on schulquiz.info!",
     "content_scripts": [
         {

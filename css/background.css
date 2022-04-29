@@ -2,3 +2,27 @@
 	background-color:#9f9 !important;
 	box-shadow:0px 0px 1px #9f9, 0px 0px 2px #9f9, 0px 0px 3px #9f9, 0px 0px 4px #9f9 !important;
 }
+.war_richtig {
+	background-color:#00C !important;
+	color:#FF3 !important;
+}
+.schulquiz_solver {
+	margin: 50px 0;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+#run {
+	width: 200px;
+	height: 40px;
+	background-color: #5b91b2;
+	color: #fff;
+	border: 1px solid #5b91b2;
+	transition: 0.5s ease-in;
+	cursor: pointer;
+	border-radius: 5px;
+	box-shadow: inset 0 0 0 0 #fff;
+}
+#run:hover {
+	box-shadow: inset -200px 0 0 0 #fff;
+	color: #5b91b2;
+}
