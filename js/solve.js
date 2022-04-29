@@ -2,11 +2,11 @@ function setValueToMaximumPoints() {
     document.getElementById('anzahl_richtig').value = document.getElementById('anzahl_antworten').value;
 }
 function clickElement(input) {
-    if(!input.classList.contains('solved')) {
-        input.disabled = false;
-        input.click();
+    input.disabled = false;
+    input.click();
+    setValueToMaximumPoints();
+    if(document.getElementById('anzahl_richtig').value > document.getElementById('anzahl_antworten').value) {
         setValueToMaximumPoints();
-        input.classList.add('solved');
     }
 }
 function clickAllInputs() {
@@ -19,6 +19,7 @@ function clickAllInputs() {
     for(let i = 0; i < inputs.length; i++) {
         clickElement(inputs[i]);
     }
+    setValueToMaximumPoints();
 }
 let div = document.body.insertAdjacentElement('beforeEnd', document.createElement('div'));
 div.classList.add('schulquiz_solver');
